@@ -5,13 +5,14 @@ include_once "db_connect.php";
 $mysqli = new mysqli("localhost","root","","db_forum1") or die("TEST");
 $stmt = $mysqli->prepare("SELECT * FROM tb_posts");
 $stmt->execute();
-$stmt->bind_result($id,$sPost,$iUserid);
+$stmt->bind_result($id,$sPost,$iUserid,$name);
 $data = [];
 
 while($row = $stmt->fetch()){
 	$data[] = array(
 		"sPost"=>$sPost,
-		"iUserid"=>$iUserid
+    "iUserid"=>$iUserid,
+    "name"=>$name
 	);
 }
 
@@ -80,7 +81,7 @@ while($row = $stmt->fetch()){
 	  <div class="clear card">
       <h2>FEEDBACKS</h2>
 		  <!-- appear the person name that post the forum -->
-      <h5>Posted by <div class="name"><?=$val["iUserid"]?></div>, 07-12-2019<a class="clear btn_edit" href="#"></a></h5>
+      <h5>Posted by <div class="name"><?=$val["name"]?></div>, 07-12-2019<a class="clear btn_edit" href="#"></a></h5>
 		<a class="btn_delete" href="#"></a>
 		  <!-- appear data post -->
       <div class="postcon1"><div class="postcon2"><p><?=$val["sPost"]?></p></div></div><a class="btn_read" href="#">Read more</a>
