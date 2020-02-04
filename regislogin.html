@@ -1,0 +1,114 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+
+  <meta name="theme-color" content="#fafafa">
+	<meta name="viewport" content="width=device-width, initialscale=1">
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+
+	<header class="header">
+  <a href="index.html" class="logo">AceTutor</a>
+		<input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="forum.html">Forum</a></li>
+    <li><a href="regislogin.html" class="clicked">Register/Log In</a></li>
+  </ul>
+</header>
+	
+
+  		<div id="wrapper">
+		<div class="formcon">
+		<span class="form-heading">Sign Up</span>
+			<form action="regislogin.php" method="post">
+			<div class="inputgrp">
+				<i class="fas fa-user"></i>
+				<input type="text" placeholder="Username.." name="sUsername" required>
+				<span class="bar"></span>
+				</div>
+				<div class="inputgrp">
+				<i class="fas fa-envelope"></i>
+				<input type="text" placeholder="Email.." name="sEmail" required>
+				<span class="bar"></span>
+				</div>
+				<div class="inputgrp">
+				<i class="fas fa-lock"></i>
+				<input type="password" placeholder="Password.." name="sPassword" required>
+				<span class="bar"></span>
+				</div>
+				
+				<div class="inputgrp">
+				<input type="submit" value="Submit">
+					<!--
+				<i class="fas fa-long-arrow-alt-right"></i>
+					!-->
+
+				</div>
+				<div class="switch-login">
+				<a href="#">Already have an account? <span>Login</span></a>
+				</div>
+			</form>
+		</div>
+			
+			<div class="formcon1">
+		<span class="form-heading">Log In</span>
+			<form action="login.php" method="post">
+			<div class="inputgrp1">
+				<i class="fas fa-user"></i>
+				<input type="text" placeholder="Username.." name="sUsername" required>
+				<span class="bar"></span>
+				</div>
+				<div class="inputgrp1">
+				<i class="fas fa-lock"></i>
+				<input type="password" placeholder="Password.." name="sPassword" required>
+				<span class="bar"></span>
+				</div>
+				<div class="inputgrp1">
+				<input type="submit" value="Login"/>
+				
+				</div>
+				<div class="switch-login1">
+				<a href="#">Do not have an account? <span>Register</span></a>
+				</div>
+			</form>
+		</div>
+		
+		
+		</div>
+		
+
+<footer class="footer">
+	
+	<img src="img/facebook.png" alt="fb">
+	<img src="img/instagram.png" alt="ig">
+	<img src="img/google-plus.png" alt="gmail">
+	<p>Copyright &#169; Meihui 2019</p>
+	
+	</footer>
+	
+</body>
+
+</html>
