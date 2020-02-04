@@ -3,7 +3,7 @@
 session_start();
 include_once "db_connect.php";
 $mysqli = new mysqli("localhost","root","","db_forum1") or die("TEST");
-$stmt = $mysqli->prepare("SELECT * FROM tb_posts");
+$stmt = $mysqli->prepare("SELECT id_post, sPost, iUserid, tb_users.sUsername FROM tb_posts, tb_users WHERE tb_users.id = iUserid");
 $stmt->execute();
 $stmt->bind_result($id,$sPost,$iUserid,$name);
 $data = [];
