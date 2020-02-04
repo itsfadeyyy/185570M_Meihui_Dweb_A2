@@ -5,7 +5,7 @@ include_once "db_connect.php";
 $mysqli = new mysqli("localhost","root","","db_forum1") or die("TEST");
 $stmt = $mysqli->prepare("SELECT * FROM tb_posts");
 $stmt->execute();
-$stmt->bind_result($sPost,$iUserid);
+$stmt->bind_result($id,$sPost,$iUserid);
 $data = [];
 
 while($row = $stmt->fetch()){
